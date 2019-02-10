@@ -49,7 +49,7 @@ public class ServicoLoc {
         if(hora <= 12){
            subtotal = Math.ceil(hora) * precoHora;
         }else{            
-           subtotal = Math.ceil(hora) * precoDia; 
+           subtotal = Math.ceil(hora / 24) * precoDia; 
         }        
         double tax = taxa.tax(subtotal);
         locacao.setFatura(new Fatura(subtotal, tax));
