@@ -8,7 +8,7 @@ import java.util.Scanner;
 import models.Car;
 import models.Locacao;
 import service.ServicoLoc;
-import service.Taxa;
+import service.TaxaBrasil;
 
 
 public class Program {
@@ -33,7 +33,7 @@ public class Program {
         System.out.println("Digite o preço por dia: ");
         double precoDia = sc.nextDouble();
         
-        ServicoLoc  servicoLoc = new ServicoLoc(precoHora, precoDia, new Taxa());
+        ServicoLoc  servicoLoc = new ServicoLoc(precoHora, precoDia, new TaxaBrasil());
         
         servicoLoc.processInvoice(loc);
         

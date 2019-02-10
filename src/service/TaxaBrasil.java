@@ -1,8 +1,9 @@
 
 package service;
 
-public class Taxa {
+public class TaxaBrasil implements TaxService{
     
+    @Override
     public double tax(double amount){
         
         if(amount <= 100){

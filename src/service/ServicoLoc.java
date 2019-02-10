@@ -8,9 +8,9 @@ public class ServicoLoc {
     private Double precoHora;
     private Double precoDia;
 
-    private Taxa taxa; 
+    private TaxService taxa; 
 
-    public ServicoLoc(Double precoHora, Double precoDia, Taxa taxa) {
+    public ServicoLoc(Double precoHora, Double precoDia, TaxService taxa) {
         this.precoHora = precoHora;
         this.precoDia = precoDia;
         this.taxa = taxa;
@@ -32,13 +32,15 @@ public class ServicoLoc {
         this.precoDia = precoDia;
     }
 
-    public Taxa getTaxa() {
+    public TaxService getTaxa() {
         return taxa;
     }
 
-    public void setTaxa(Taxa taxa) {
+    public void setTaxa(TaxService taxa) {
         this.taxa = taxa;
     }
+
+   
             
     
     public void processInvoice(Locacao locacao){
